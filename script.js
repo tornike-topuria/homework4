@@ -6,19 +6,29 @@ array1.push("javascript", "python")
 array1.unshift("html", "css")
 console.log(array1);
 console.log(array1.length)
+console.log("");
 
 
 //2
+let array2 = ["ფორთოხალი", "ბანანი", "მსხალი"];
+
+console.log(array2.length);
+array2.push("ვაშლი", "ანანასი");
+array2.unshift("საზამთრო");
+console.log(array2.length);
+array2.splice(2, 0, "მანგო");
+array2.shift()
+array2.pop();
+console.log(array2);
+console.log(array2.length);
 
 
 
 //3
 let array3 =[1, 2, 3, 4, 5];
-
-// console.log(array3.splice(0, "a" , "b", "c"));
-
-
-
+let element = ['a', 'b', 'c'];
+array3.splice(3, 0, 'a', 'b', 'c');
+console.log(array3);
 
 
 
@@ -31,12 +41,6 @@ let arr4 = [1, 2, 3, 4, 5];
 console.log(result)
 
 
-    
-
-    
-   
-
-// })
 
 //5
 let array5=[2,15,10,24];
@@ -56,11 +60,20 @@ console.log(Newarray);
 //7
 let languages = ['html', 'css', 'javascript', 'python', 'php'];
 
+let Languages = languages.filter((Languages) => {
+    return Languages.length > 3;
+});
+
+console.log(Languages);
 
 
 //8
-let words = ['madrid', 'rome', 'milan', 'berlin'];
+let array8 = ['madrid', 'rome', 'milan', 'berlin'];
 
+let city = array8.filter((element) => {
+    return element.includes('n' && 'm');
+});
+console.log(city);
 
 
 //9
@@ -74,9 +87,7 @@ console.log(neWarr);
 
 //10
 let arr10 = [-1, -2, -3, 4];
-
 let Newarr10 = arr10.some((element) => element > 0 )
-
 console.log(Newarr10);
 
 
@@ -86,35 +97,26 @@ let array11 =[23,45,32,5,87,7,3,98]
 console.log(array11.sort((a,b) => b - a));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //12
-// function getinfo() {
-//     let nameuser = 'anna';
-//     console.log(nameuser);
+function getinfo() {
+    let nameuser = 'anna';
+    //  აქ დაიბეჭდება anna
+    console.log(nameuser);
+
+    function userinfo() {
+        let info = `user name is ${nameuser}`;
+        //აქ დაიბეჭდება user name is anna
+        console.log(info);
+
+    }
+    userinfo();
+    //აქ დაიბეჭდება undefined, info ცვლადია, userinfo კი ფუნქციას. 
+    console.log(info);
+}
 
 
-//     function userinfo() {
-//         let info = `user name is ${nameuser}`;
-//         console.log(info);
-//     }
-//     userinfo();
-//     console.log(info);
-// }
-
-
- // console.log(nameuser);
-// getinfo();
+ console.log(nameuser);
+ //ამ შემთხვევაშიც undefined დაიბეჭდება, nameuser ცვლადს ეკუთვნის, getinfo ფუნქციას.
+getinfo();
 
 
